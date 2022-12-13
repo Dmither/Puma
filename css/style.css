@@ -1,5 +1,6 @@
 @import url(fonts.css);
 @import url(reset.css);
+@import url(swiper-bundle.min.css);
 :root body {
   font-family: "Poppins";
 }
@@ -30,15 +31,21 @@
 .header {
   position: -webkit-sticky;
   position: sticky;
+  z-index: 100;
   height: 1px;
   top: 0;
   width: 100%;
 }
 .header .header__wrapper {
   position: absolute;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
+}
+.header .header__container {
+  position: relative;
+  z-index: 100;
   padding: 5px 15px;
   display: flex;
   align-items: center;
@@ -46,12 +53,12 @@
   gap: 81px;
 }
 @media (min-width: 768px) {
-  .header .header__wrapper {
+  .header .header__container {
     padding: 30px 15px;
   }
 }
 @media (min-width: 992px) {
-  .header .header__wrapper {
+  .header .header__container {
     padding: 40px 15px;
   }
 }
@@ -203,7 +210,181 @@
   }
 }
 
-.main {
-  height: 1000px;
-  padding: 50px 15px;
+.main .hero {
+  position: relative;
+  z-index: 0;
+}
+.main .hero .hero__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #EE5514 1.14%, rgba(238, 85, 20, 0) 100%);
+  opacity: 0.1;
+}
+.main .hero .hero__container {
+  padding-top: 131px;
+  padding-bottom: 118px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+.main .hero .hero__call {
+  color: #1A0A03;
+}
+.main .hero .hero__call .hero__slogan {
+  margin-bottom: 20px;
+  max-width: 366px;
+  font-family: "Source";
+  font-size: 61px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.main .hero .hero__call .hero__slogan span {
+  color: #EE5514;
+}
+.main .hero .hero__call .hero__text {
+  max-width: 326px;
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+.main .hero .slider {
+  width: 100%;
+  position: relative;
+}
+.main .hero .slider .slider__btn {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(238, 85, 20, 0.1);
+  position: absolute;
+  top: 47%;
+}
+.main .hero .slider .slider__btn::after {
+  display: block;
+  width: 100%;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 70px;
+  text-align: center;
+  color: #1A0A03;
+}
+.main .hero .slider .swiper-button-prev {
+  left: 0;
+}
+.main .hero .slider .swiper-button-prev::after {
+  padding-right: 4px;
+}
+.main .hero .slider .swiper-button-next {
+  right: 0;
+}
+.main .hero .slider .swiper-button-next::after {
+  padding-left: 4px;
+}
+.main .hero .slider .slider__bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  aspect-ratio: 1/1;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  border: 11px solid rgba(238, 85, 20, 0.4);
+}
+.main .hero .slider .slider__slide {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.main .hero .slider .slider__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+}
+.main .hero .hero__table {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: -50px;
+  left: 0;
+  padding: 30px 55px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 14px rgba(26, 10, 3, 0.05);
+}
+.main .hero .hero__table .drop {
+  position: relative;
+  padding-right: 80px;
+}
+.main .hero .hero__table .drop::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 35px;
+  width: 1px;
+  height: 42px;
+  background-color: #EE5514;
+  border-radius: 1px;
+}
+.main .hero .hero__table .drop:last-of-type {
+  padding-right: 40px;
+}
+.main .hero .hero__table .drop:last-of-type::after {
+  width: 0;
+}
+.main .hero .hero__table .drop__decrioption {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1A0A03;
+  opacity: 0.7;
+}
+.main .hero .hero__table .drop__menu {
+  display: inline-block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #1A0A03;
+  background-color: #fff;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 22px;
+  background-image: url(../img/svg/drop-arrow.svg);
+  background-position: right 12px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.main .hero .hero__table .drop__menu option {
+  font-family: "Poppins";
+  padding: 0;
+}
+.main .hero .hero__table .hero__buy-btn {
+  padding: 13px 28px;
+  background-color: #EE5514;
+  border: 2px solid #EE5514;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}
+.main .hero .hero__table .hero__buy-btn:hover, .main .hero .hero__table .hero__buy-btn:focus {
+  background-color: #fff;
+  color: #EE5514;
 }/*# sourceMappingURL=style.css.map */

@@ -10,8 +10,8 @@
 <body>
   <header class="header">
     <!-- .header asks position sticky; &__wrapper is true header -->
-    <div class="container">
-      <div class="header__wrapper">
+    <div class="header__wrapper">
+      <div class="container header__container">
         <!-- logo -->
         <a href="" class="header__logo">
           <img src="img/svg/logo.svg" alt="">
@@ -33,9 +33,74 @@
     </div>
   </header>
   <main class="main">
-    
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="container hero__container">
+        <!-- call -->
+        <div class="hero__call">
+          <h1 class="hero__slogan">Life is better in running <span>shoes</span>.
+          </h1>
+          <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas leo ultrices </p>
+        </div>
+        <!-- slider -->
+        <div class="swiper slider">
+          <div class="slider__bg">
+            <img src="img/svg/dots.svg" alt="" class="slider__dots">
+          </div>
+          <div class="swiper-wrapper slider__wrapper">
+            <div class="swiper-slide slider__slide">
+              <img src="img/webp/hero-img.webp" alt="">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img src="img/webp/hero-img.webp" alt="">
+            </div>
+            <div class="swiper-slide slider__slide">
+              <img src="img/webp/hero-img.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-button-prev slider__btn"></div>
+          <div class="swiper-button-next slider__btn"></div>
+        </div>
+        <!-- table -->
+        <div class="hero__table">
+          <div class="hero__drop drop">
+            <p class="drop__decrioption">Brand</p>
+            <select name="brand" class="drop__menu">
+              <option value="puma">Puma</option>
+              <option value="other">Not Puma</option>
+            </select>
+          </div>
+          <div class="hero__drop drop">
+            <p class="drop__decrioption">Person</p>
+            <select name="person" class="drop__menu">
+              <option value="man">man</option>
+              <option value="woman">woman</option>
+              <option value="child">child</option>
+            </select>
+          </div>
+          <div class="hero__drop drop">
+            <p class="drop__decrioption">Size</p>
+            <select name="size" class="drop__menu">
+              <option value="small">small</option>
+              <option value="middle">middle</option>
+              <option value="large">large</option>
+            </select>
+          </div>
+          <div class="hero__drop drop">
+            <p class="drop__decrioption">Price</p>
+            <select name="price" class="drop__menu">
+              <option value="150">$150</option>
+              <option value="300">$300</option>
+              <option value="450">$450</option>
+            </select>
+          </div>
+          <button type="submit" class="hero__buy-btn">Buy now</button>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <script src="js/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
