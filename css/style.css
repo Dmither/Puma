@@ -27,6 +27,21 @@
 :root .freeze {
   overflow: hidden;
 }
+:root .subtitle {
+  font-family: "Source";
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #EE5514;
+}
+:root .title {
+  font-family: "Source";
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 1.3;
+  color: #1A0A03;
+}
 
 .header {
   position: -webkit-sticky;
@@ -284,6 +299,9 @@
 .main .hero .slider .swiper-button-next::after {
   padding-left: 4px;
 }
+.main .hero .slider .swiper-button-disabled {
+  opacity: 0;
+}
 .main .hero .slider .slider__bg {
   position: absolute;
   top: 0;
@@ -387,4 +405,59 @@
 .main .hero .hero__table .hero__buy-btn:hover, .main .hero .hero__table .hero__buy-btn:focus {
   background-color: #fff;
   color: #EE5514;
+}
+.main .video .video__container {
+  padding-top: 243px;
+  padding-bottom: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  gap: 15px;
+}
+.main .video .video__subtitle {
+  margin-bottom: 10px;
+}
+.main .video .video__title {
+  margin-bottom: 20px;
+  max-width: 340px;
+}
+.main .video .video__text {
+  max-width: 326px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1A0A03;
+  opacity: 0.7;
+}
+.main .video .video__img {
+  position: relative;
+}
+.main .video .video__img img {
+  width: 100%;
+}
+.main .video .video__back {
+  position: absolute;
+  top: -54px;
+  right: -50px;
+}
+.main .video .video__front {
+  position: relative;
+  z-index: 1;
+}
+.main .video .video__round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+.main .video .video__round .video__play {
+  width: 40%;
+  height: 40%;
 }/*# sourceMappingURL=style.css.map */
