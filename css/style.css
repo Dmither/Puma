@@ -460,4 +460,100 @@
 .main .video .video__round .video__play {
   width: 40%;
   height: 40%;
+}
+.main .feature .feature__container {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .feature .feature__subtitle {
+  margin-bottom: 10px;
+}
+.main .feature .feature__title {
+  margin-bottom: 60px;
+}
+.main .feature .feature__grid {
+  align-self: stretch;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.main .feature .feature__grid .card {
+  width: 360px;
+  padding: 56px 60px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 1px 30px rgba(26, 10, 3, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease 0s;
+}
+.main .feature .feature__grid .card .card__icon {
+  margin-bottom: 38px;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.main .feature .feature__grid .card .card__icon_quality {
+  background-color: rgba(18, 101, 225, 0.1);
+}
+.main .feature .feature__grid .card .card__icon_flexible {
+  background-color: rgba(95, 46, 234, 0.1);
+}
+.main .feature .feature__grid .card .card__icon_lasting {
+  background-color: rgba(170, 33, 234, 0.1);
+}
+.main .feature .feature__grid .card .card__title {
+  margin-bottom: 10px;
+  font-family: "Source";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #1A0A03;
+}
+.main .feature .feature__grid .card .card__text {
+  margin-bottom: 20px;
+  color: #1A0A03;
+  opacity: 0.7;
+  text-align: center;
+}
+.main .feature .feature__grid .card .card__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main .feature .feature__grid .card .card__btn p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #EE5514;
+}
+.main .feature .feature__grid .card .card__btn img {
+  width: 5px;
+  padding-top: 3px;
+}
+.main .feature .feature__grid .card .card__btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1%;
+  height: 1px;
+  transition: all 0.2s ease 0s;
+}
+.main .feature .feature__grid .card .card__btn:hover::after, .main .feature .feature__grid .card .card__btn:focus::after {
+  width: 100%;
+  background-color: #EE5514;
+}
+.main .feature .feature__grid .card:hover {
+  background-color: rgba(238, 85, 20, 0.1);
 }/*# sourceMappingURL=style.css.map */

@@ -435,4 +435,102 @@
       }
     }
   }
+  .feature {
+    .feature__container{
+      margin-top: 70px;
+      margin-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .feature__subtitle {
+      margin-bottom: 10px;
+    }
+    .feature__title {
+      margin-bottom: 60px;
+    }
+    .feature__grid {
+      align-self:stretch;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      .card {
+        width: 360px;
+        padding: 56px 60px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 1px 30px rgba($color: #1A0A03, $alpha: 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.2s ease 0s;
+        .card__icon {
+          margin-bottom: 38px;
+          width: 140px;
+          height: 140px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          &_quality {
+            background-color: rgba($color: #1265E1, $alpha: 0.1);
+          }
+          &_flexible {
+            background-color: rgba($color: #5F2EEA, $alpha: 0.1);
+          }
+          &_lasting {
+            background-color: rgba($color: #AA21EA, $alpha: 0.1);
+          }
+        }
+        .card__title {
+          margin-bottom: 10px;
+          font-family: 'Source';
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 1.5;
+          color: #1A0A03;
+        }
+        .card__text {
+          margin-bottom: 20px;
+          color: #1A0A03;
+          opacity: 0.7;
+          text-align: center;
+        }
+        .card__btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          p{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #EE5514;
+          }
+          img{
+            width: 5px;
+            padding-top: 3px;
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1%;
+            height: 1px;
+            transition: all 0.2s ease 0s;
+          }
+          &:hover::after, &:focus::after{
+            width: 100%;
+            background-color: #EE5514;
+          }
+        }
+        &:hover{
+          background-color: rgba($color: #EE5514, $alpha: 0.1);
+        }
+      }
+    }
+  }
 }
