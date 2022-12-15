@@ -14,3 +14,10 @@ new Swiper('.slider', {
     prevEl: '.swiper-button-prev',
   }
 })
+
+new Swiper('.gallary-slider', {
+  navigation: {
+    nextEl: '.gallary-slider__next',
+    prevEl: '.gallary-slider__prev',
+  }
+})

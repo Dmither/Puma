@@ -338,6 +338,8 @@
       }
       .drop__menu {
         display: inline-block;
+        width: -webkit-min-content;
+        width: -moz-min-content;
         width: min-content;
         font-family: inherit;
         font-size: 18px;
@@ -529,6 +531,48 @@
         }
         &:hover{
           background-color: rgba($color: #EE5514, $alpha: 0.1);
+        }
+      }
+    }
+  }
+  .gallary {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .gallary__subtitle {
+      margin-bottom: 13px;
+    }
+    .gallary__title {
+      margin-bottom: 16px;
+    }
+    .gallary__categories {
+      display: flex;
+      gap: 35px;
+    }
+    .categories {
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+      color: rgba($color: #1A0A03, $alpha: 0.7);
+      .categories__items {
+        display: flex;
+        gap: 35px;
+      }
+      .categories__item{
+        cursor: pointer;
+        position: relative;
+        span{
+          display: inline-block;
+        }
+      }
+      .categories__radio {
+        position: absolute;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        &:checked + span{
+          color: #EE5514;
+          opacity: 1;
+          border-bottom: 1px solid #EE5514;
         }
       }
     }

@@ -556,4 +556,46 @@
 }
 .main .feature .feature__grid .card:hover {
   background-color: rgba(238, 85, 20, 0.1);
+}
+.main .gallary {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.main .gallary .gallary__subtitle {
+  margin-bottom: 13px;
+}
+.main .gallary .gallary__title {
+  margin-bottom: 16px;
+}
+.main .gallary .gallary__categories {
+  display: flex;
+  gap: 35px;
+}
+.main .gallary .categories {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  color: rgba(26, 10, 3, 0.7);
+}
+.main .gallary .categories .categories__items {
+  display: flex;
+  gap: 35px;
+}
+.main .gallary .categories .categories__item {
+  cursor: pointer;
+  position: relative;
+}
+.main .gallary .categories .categories__item span {
+  display: inline-block;
+}
+.main .gallary .categories .categories__radio {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.main .gallary .categories .categories__radio:checked + span {
+  color: #EE5514;
+  opacity: 1;
+  border-bottom: 1px solid #EE5514;
 }/*# sourceMappingURL=style.css.map */
