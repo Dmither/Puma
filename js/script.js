@@ -19,5 +19,6 @@ new Swiper('.gallary-slider', {
   navigation: {
     nextEl: '.gallary-slider__next',
     prevEl: '.gallary-slider__prev',
-  }
+  },
+  slidesPerView: 'auto',
 })
