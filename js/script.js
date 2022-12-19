@@ -21,4 +21,14 @@ new Swiper('.gallary-slider', {
     prevEl: '.gallary-slider__prev',
   },
   slidesPerView: 'auto',
+  spaceBetween: 30,
+})
+
+new Swiper('.testimonials-slider', {
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
+  slidesPerView: 'auto',
+  spaceBetween: 30,
 })
